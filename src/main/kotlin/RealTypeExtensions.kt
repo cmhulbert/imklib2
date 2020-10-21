@@ -185,3 +185,11 @@ infix fun <T: RealType<T>> T.`**`(exponent: IntegerType<*>) = copy().also { pow(
 fun <T: RealType<T>> T.exp(base: Double = E) = setReal(base.pow(realDouble))
 fun <T: RealType<T>> T.exp(base: Float = E.toFloat()) = setReal(base.pow(realFloat))
 fun <T: RealType<T>> T.exp(base: RealType<*>) = setReal(base.getRealDouble().pow(realDouble))
+
+/* threshold operators */
+operator fun <T : RealType<T>> T.compareTo(value: Byte): Int = createWithValue(value).compareTo(this)
+operator fun <T : RealType<T>> T.compareTo(value: Short): Int = createWithValue(value).compareTo(this)
+operator fun <T : RealType<T>> T.compareTo(value: Int): Int = createWithValue(value).compareTo(this)
+operator fun <T : RealType<T>> T.compareTo(value: Long): Int = createWithValue(value).compareTo(this)
+operator fun <T : RealType<T>> T.compareTo(value: Float): Int = createWithValue(value).compareTo(this)
+operator fun <T : RealType<T>> T.compareTo(value: Double): Int = createWithValue(value).compareTo(this)
