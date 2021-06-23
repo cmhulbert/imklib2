@@ -110,7 +110,7 @@ publishing {
             from(components["kotlin"])
             pom {
                 name.set("ntakt")
-                url.set("https://github.com/saalfeldlab/ntakt")
+                url.set("https://github.com/cmhulbert/imklib2")
                 inceptionYear.set("2020")
                 licenses {
                     license {
@@ -119,17 +119,10 @@ publishing {
                     }
                 }
                 scm {
-                    connection.set("scm:git:git://github.com/saalfeldlab/ntakt")
-                    developerConnection.set("scm:git:git@github.com:saalfeldlab/ntakt")
+                    connection.set("scm:git:git://github.com/cmhulbert/imklib2")
+                    developerConnection.set("scm:git:git@github.com:cmhulbert/imklib2")
                     tag.set("HEAD")
-                    url.set("https://github.com/saalfeldlab/ntakt")
-                }
-                ciManagement {
-                    system.set("Travis CI")
-                    url.set("https://travis-ci.com/saalfeldlab/ntakt")
-                }
-                repositories {
-                    add(maven("https://maven.scijava.org/content/groups/public"))
+                    url.set("https://github.com/cmhulbert/imklib2")
                 }
                 withXml {
                     asNode()
